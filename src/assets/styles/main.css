@@ -1,0 +1,282 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
+@custom-variant dark (&:where(.p-dark, .p-dark *));
+
+body {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar,
+.cont-sections::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #aab1bb;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+strong {
+  transition: 1s;
+  color: #e2e8f0;
+}
+
+.light-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  z-index: -1;
+  transition: transform 0.05s;
+  background: radial-gradient(circle, #6b51ff1c 0%, transparent 60%);
+  backdrop-filter: blur(4px);
+}
+
+.mini-info {
+  font-size: 16px;
+}
+
+.button-header {
+  font-variant: small-caps;
+
+}
+
+.button-header p {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.button-header:hover div {
+  transition: 1s;
+  width: 55px;
+}
+
+.active {
+  transition: 1s;
+  width: 55px;
+}
+
+.button-header:hover p,
+.button-header .active p {
+  transition: 1s;
+  color: #ffff;
+}
+
+.label {
+  color: #ea5ec7;
+  background-color: #ea5ec75d;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 2px 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.p-button:hover {
+  background-color: transparent;
+}
+
+.button-header:hover {
+  background-color: transparent;
+
+}
+
+.cont-sections {
+  scroll-behavior: smooth;
+}
+
+.section-about:hover strong {
+  transition: 1s;
+  color: #ea5ec7;
+}
+
+.p-card:hover {
+  transition: 1s;
+  color: #ffff;
+  background: #8b8b8b1a !important;
+}
+
+.p-card:hover h3 {
+  transition: 1s;
+  color: #ea5ec7;
+}
+
+.p-card:hover h2 {
+  transition: 1s;
+  color: #fff;
+}
+
+.p-card h3, .p-card h2 {
+  font-size: 20px;
+}
+
+.card-search {
+  background: #8b8b8b1a !important;
+}
+
+.card-search h3 {
+  color: #ea5ec7;
+}
+
+.button-search {
+  cursor: pointer;
+  transition: 1s;
+
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.active-role {
+  transition: 1s;
+  color: #ea5ec7;
+}
+
+svg:hover {
+  transition: 1s;
+  fill: #fff;
+  cursor: pointer;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.section-marga {
+  bottom: -400px;
+}
+
+.text-marga {
+  color: #ea5ec7;
+  cursor: help;
+
+}
+
+@media (max-width: 990px) {
+  body {
+    overflow: auto;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin-left: 3%;
+  }
+
+  .mini-info {
+    width: 50%;
+  }
+
+  .button-header {
+    display: flex;
+    flex-direction: column-reverse;
+    /* align-items: flex-start; */
+  }
+
+  .button-header div {
+    display: none;
+  }
+
+  .button-header p {
+    margin-right: 10px;
+    font-weight: 600;
+  }
+
+  .cont-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cont-sections {
+    width: 90%;
+    margin-left: 5%;
+    padding-left: 0;
+  }
+
+  .section-about,
+  .section-experience,
+  .section-projects, .section-foryou {
+    width: 100%;
+  }
+
+  strong {
+    color: #ea5ec7;
+  }
+
+  .title {
+    display: flex;
+    font-size: 25px;
+    font-variant: small-caps;
+  }
+
+  .button-header p {
+    padding-left: 0;
+  }
+
+  .button-header:hover div {
+    transition: 1s;
+    width: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .section-header {
+    padding: 15px 0;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content div {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .cont-labels .label {
+    width: auto;
+    padding: 2px 15px;
+  }
+
+ 
+}
